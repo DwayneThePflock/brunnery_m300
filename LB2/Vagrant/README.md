@@ -13,3 +13,16 @@ So sieht das Vagrant File dann aus
     $ vagrant init ubuntu/xenial64        #Vagrantfile erzeugen
     $ vagrant up --provider virtualbox    #Virtuelle Maschine erstellen & starten
     
+# Vagrant Befehle
+
+Hier sind die wichtigsten Vagrant Befehle aufgelistet:
+
+| Befehl           |Beschreibung                                                                             |
+| -----------------|:---------------------------------------------------------------------------------------:|
+| Vagrant init     |Initialisiert die Vagrant Umgebung im aktuellen Verzeichnis und erstellt ein Vagrantfile |
+| Vagrant up       |Erzeugt und Konfiguriert eine Virtuelle Maschine basierend auf dem Vagrantfile           |
+| Vagrant ssh      |Verbindung zur VM per SSH wird hergestellt                                               | 
+| Vagrant status   |Zeigt den aktuellen Status der VM an                                                     | 
+| Vagrant port     |Zeigt die Weitergeleiteten Ports der VM an                                               | 
+| Vagrant halt     |VM wird gestoppt                                                                         | 
+| Vagrant destroy  |VM wird gestoppt und gelöscht                                                            | 
