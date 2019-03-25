@@ -32,3 +32,5 @@ Hier sind die wichtigsten Vagrant Befehle aufgelistet:
 Aus dem M300 Repository, setzte ich automatisiert eine Ubuntu VM mit Apache2 auf.
 Dazu musste ich nur in das Verzeichnis /M300/vagrant/web wechseln und "vagrant up" ausführen. 
 Die VM wird daraufhin installiert und in Virtualbox angezeigt.  
+
+![brunnery_m300](pictures/virtualbox)
