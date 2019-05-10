@@ -17,15 +17,14 @@ In der Lernberuteilung geht es um das Ausetzten und betreiben von einem Service 
 
 # Service
 
-Als Service wurde Wordpress installiert. Bei WordPress wird im Hinterhrung MySWL verwendet. Zusätzlich ist es möglich per PHPMyAdmin die Datenbanken zu verwalten. Durch den Visuellen Faktor und dem übersichtlichem GUI wird die Arbeit mit den MYSQL Datenbank sehr vereinfacht. 
+Als Service wurde Wordpress installiert. Bei WordPress wird im Hintergrund MySWL verwendet. Zusätzlich ist es möglich per PHPMyAdmin die Datenbanken zu verwalten.
 
 Per Interner Verlinkung zwischen MySQL und PHPMyAdmin und MySQL und Wordpress kann dies ermöglicht werden.
 
-![GUI](Images/GUI.PNG)
 
 # Technische Angaben
 
-Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das custom "Net1" Netzwerk können die Container kommunizieren.
+Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das virtualnet "Net1" können die Container kommunizieren.
 
 | **Info**       | **Container** 1 |   **Container** 2 |  **Container** 3 |
 | :------------- | :-------------: | ----------------: | ---------------: |
@@ -36,7 +35,6 @@ Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim 
 
 ## Netzwerkplan
 
-![Netzwerk](Images/netzwerk.png)
 
 Die Container werden innerhalb von der Docker VM aufgesetzt. Das Net1 wird auf den Modus "Bridge" konfiguriert, sodass die Container vom Host erreichbar sind. Dabei ist der Host auch der Gateway zum Internet.
 
@@ -55,9 +53,6 @@ docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
 
 "-f" setzt den den Pfad zum docker-compose.yml File
 
-Hier der Code des docker-compose.yml File:
-
-![code](Images/code.PNG)
 
 Auf Zeile 4-16 wird der MySQL Container erstellt und konfiguriert
 
@@ -69,7 +64,6 @@ Auf Zeile 47-48 wird das Volume gesetzt.
 
 Auf der Zeile 49-50 wird das Netzwerk erstellt
 
-Das File ist auf meinem GitHub LB2 [Repository][lb2git] abgelegt
 
 ## Anleitung für den Betrieb
 
@@ -78,9 +72,6 @@ Wie oben beim Code erklärt wird per Befehel das Docker-Compose.yml ausgeführt 
 ```Shell
 docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
  ```
-Wenn alles geklappt hat sieht es so aus:
-
-![installation](Images/installation.PNG)
 
  ### 2. Zugriff auf MySQL Webinterface <!-- omit in toc -->
 
@@ -88,9 +79,6 @@ Wenn alles geklappt hat sieht es so aus:
 
 - Es wird die URL http://localhost:8080 eigegeben
 
-Nun sieht das Fenster so aus:
-
-![Web](Images/web.PNG)
 
 ### 3. PHPMyAdmin Login <!-- omit in toc -->
 Als Benutzer wird **User** genommen
@@ -99,19 +87,14 @@ Das Passwort ist **1234**
 
 Die Anmeldung erflogt beim drücken der Enter-taste
 
-Das Fenster sieht jetzt so aus:
 
-![PHP](Images/GUI.PNG)
 
 ### 4. Los arbeiten mit PHPMyAmdin <!-- omit in toc -->
 
 AB jetzt kann mit PHPMyAdmin gearbeitet werden. Es können Datenbanken erstellt und administriert werden.
 
-Wenn benötigt können neue Benutzer angelegt werden.
+Wenn benötigt können neue Benutzer im Phpmyadmin angelegt werden.
 
-Offizielle PHPMyAdmin [Website][ophp]
-
-Offizielle MySQL [Website][osql]
 
 ### 5. Zugriff auf Wordpress <!-- omit in toc -->
 
@@ -119,8 +102,6 @@ Offizielle MySQL [Website][osql]
 
 - Es wird die URL http://localhost:8081 eigegeben
 
-Nun sieht das Fenster so aus:
-![Wordpress](Images/wordpress.png)
 
 Jetzt kann die Sprache ausgewählt werden. Anschliessend wird die erste Seite erstellt.
 
